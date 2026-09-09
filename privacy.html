@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TM Wallet — Политика конфиденциальности / Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 30px; margin-bottom: 4px; }
+  h2 { font-size: 22px; margin-top: 36px; }
+  .muted { opacity: .65; }
+  .lang { display: flex; gap: 12px; margin: 16px 0 32px; }
+  .lang a { padding: 6px 12px; border: 1px solid currentColor; border-radius: 999px; text-decoration: none; color: inherit; }
+  hr { border: 0; border-top: 1px solid rgba(128,128,128,.3); margin: 56px 0; }
+  table { border-collapse: collapse; width: 100%; }
+  td, th { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(128,128,128,.3); vertical-align: top; }
+</style>
+</head>
+<body>
+
+<div class="lang"><a href="#ru">Русский</a><a href="#en">English</a></div>
+
+<section id="ru">
+<h1>Политика конфиденциальности TM Wallet</h1>
+<p class="muted">Действует с 10 сентября 2026 года</p>
+
+<p>TM Wallet — приложение для хранения документов, банковских и клубных карт, паролей и заметок на вашем устройстве. Это документ о том, какие данные приложение обрабатывает и куда они попадают. Коротко: ваши данные остаются у вас. Разработчик не имеет к ним доступа, не собирает их и не передаёт третьим лицам.</p>
+
+<h2>1. Какие данные обрабатываются</h2>
+<p>Всё, что вы вводите в приложение: тексты записей, номера документов и карт, пароли, одноразовые коды, метки, заметки, фотографии и PDF-вложения. Эти данные обрабатываются только на вашем устройстве.</p>
+
+<h2>2. Где хранятся данные</h2>
+<ul>
+  <li>В памяти вашего устройства, в зашифрованном виде (AES-256-GCM). Ключ шифрования защищён мастер-паролем, который знаете только вы. Мастер-пароль нигде не сохраняется и не может быть восстановлен разработчиком.</li>
+  <li>При включённой биометрии копия ключа хранится в защищённом хранилище устройства (Keychain) и доступна только на этом устройстве после Face ID или Touch ID.</li>
+  <li>В резервных копиях, которые вы создаёте сами: файл копии зашифрован тем же способом, и вы сами выбираете, где его хранить (например, в iCloud Drive или «Файлах»). Разработчик доступа к этим файлам не имеет.</li>
+  <li>В резервных копиях iPhone (iCloud или компьютер), если они у вас включены: система копирует зашифрованные файлы приложения вместе с остальными данными устройства.</li>
+</ul>
+
+<h2>3. Куда данные не передаются</h2>
+<p>Приложение не имеет собственных серверов. Оно не отправляет ваши записи, вложения, названия записей, статистику использования, идентификаторы устройства или сведения о сбоях ни разработчику, ни кому-либо ещё. В приложении нет аналитики, рекламы и трекеров.</p>
+
+<h2>4. Единственное сетевое действие: проверка паролей по базе утечек</h2>
+<p>По вашему явному запросу (кнопка «Проверить по базе утечек» в разделе «Проверка паролей») приложение обращается к сервису Have I Been Pwned (haveibeenpwned.com). На сервер отправляются только первые пять символов криптографического хеша SHA-1 каждого пароля; сам пароль, логин, сайт и любые другие данные не передаются. По такому фрагменту восстановить пароль невозможно. Сопоставление выполняется на устройстве. Без нажатия этой кнопки приложение не выходит в сеть.</p>
+
+<h2>5. Функции системы, которые вы включаете сами</h2>
+<table>
+  <tr><th>Функция</th><th>Что покидает хранилище</th></tr>
+  <tr><td>Поиск iPhone (Spotlight)</td><td>Только названия записей и метки, без значений полей. Выключено по умолчанию.</td></tr>
+  <tr><td>Виджет избранного</td><td>Только названия избранных записей. Выключено по умолчанию.</td></tr>
+  <tr><td>Уведомления о сроках</td><td>По умолчанию без названия записи: только тип, например «документ». Название показывается, если вы это включите.</td></tr>
+  <tr><td>Копирование в буфер обмена</td><td>Значение копируется только на этом устройстве, без передачи на другие ваши устройства, и очищается через выбранное время.</td></tr>
+  <tr><td>«Поделиться» вложением</td><td>Расшифрованный файл передаётся тому приложению, которое вы выберете. Временные файлы удаляются после закрытия.</td></tr>
+  <tr><td>Распознавание документов и штрихкодов</td><td>Выполняется на устройстве средствами iOS, изображения никуда не отправляются.</td></tr>
+</table>
+<p>Отдельная настройка «Не показывать вне хранилища» у записи исключает её название из поиска, виджета и уведомлений независимо от общих настроек.</p>
+
+<h2>6. Разрешения</h2>
+<ul>
+  <li>Камера — для сканирования документов, карт и QR-кодов. Снимки сохраняются только в зашифрованное хранилище.</li>
+  <li>Фото — для добавления изображений документов из галереи.</li>
+  <li>Face ID / Touch ID — для быстрой разблокировки.</li>
+  <li>Уведомления — для напоминаний об истечении сроков.</li>
+</ul>
+
+<h2>7. Покупки</h2>
+<p>Расширенная версия (Pro) приобретается через App Store как разовая покупка. Обработку платежа выполняет Apple по её условиям; разработчик не получает ваши платёжные данные. Уже сохранённые записи остаются доступны независимо от статуса покупки.</p>
+
+<h2>8. Удаление данных</h2>
+<p>Удалите приложение, и все его данные на устройстве будут стёрты. Файлы резервных копий, которые вы сохранили сами, нужно удалить в том месте, где они хранятся. Внутри приложения также есть функция «Стереть хранилище».</p>
+
+<h2>9. Дети</h2>
+<p>Приложение не предназначено для детей младше 13 лет и не собирает данных ни о ком.</p>
+
+<h2>10. Изменения</h2>
+<p>При изменении этой политики новая версия публикуется на этой странице с обновлённой датой.</p>
+
+<h2>11. Контакт</h2>
+<p>По вопросам конфиденциальности: <a href="mailto:batyr.igdirov@gmail.com">batyr.igdirov@gmail.com</a>.</p>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>TM Wallet Privacy Policy</h1>
+<p class="muted">Effective 10 September 2026</p>
+
+<p>TM Wallet stores documents, bank and loyalty cards, passwords and notes on your device. This document explains what data the app handles and where it goes. In short: your data stays with you. The developer cannot access it, does not collect it and does not share it with anyone.</p>
+
+<h2>1. Data the app handles</h2>
+<p>Everything you enter: record text, document and card numbers, passwords, one-time codes, tags, notes, photos and PDF attachments. All of it is processed only on your device.</p>
+
+<h2>2. Where data is stored</h2>
+<ul>
+  <li>On your device, encrypted with AES-256-GCM. The encryption key is protected by a master password only you know. The master password is never stored and cannot be recovered by the developer.</li>
+  <li>With biometrics enabled, a copy of the key is kept in the device’s secure storage (Keychain), available only on this device after Face ID or Touch ID.</li>
+  <li>In backups you create yourself: the backup file is encrypted the same way and you choose where to keep it (for example iCloud Drive or Files). The developer has no access to these files.</li>
+  <li>In your iPhone backups (iCloud or computer), if enabled: the system copies the app’s encrypted files along with the rest of the device.</li>
+</ul>
+
+<h2>3. Where data is not sent</h2>
+<p>The app has no servers of its own. It does not send your records, attachments, record titles, usage statistics, device identifiers or crash reports to the developer or anyone else. There are no analytics, ads or trackers.</p>
+
+<h2>4. The only network action: breached-password check</h2>
+<p>At your explicit request (the “Check against breach database” button in Password Check) the app contacts Have I Been Pwned (haveibeenpwned.com). Only the first five characters of each password’s SHA-1 hash are sent; the password itself, the username, the site and any other data are not. A password cannot be reconstructed from that fragment. Matching happens on the device. Without pressing that button the app never uses the network.</p>
+
+<h2>5. System features you enable yourself</h2>
+<table>
+  <tr><th>Feature</th><th>What leaves the vault</th></tr>
+  <tr><td>iPhone search (Spotlight)</td><td>Record titles and tags only, no field values. Off by default.</td></tr>
+  <tr><td>Favorites widget</td><td>Titles of favorite records only. Off by default.</td></tr>
+  <tr><td>Expiry notifications</td><td>By default without the record title: only the type, e.g. “document”. The title is shown only if you enable it.</td></tr>
+  <tr><td>Clipboard</td><td>Values are copied on this device only, not shared with your other devices, and cleared after the chosen time.</td></tr>
+  <tr><td>Sharing an attachment</td><td>The decrypted file is handed to the app you choose. Temporary files are removed afterwards.</td></tr>
+  <tr><td>Document and barcode recognition</td><td>Performed on the device by iOS; images are never uploaded.</td></tr>
+</table>
+<p>A per-record setting “Don’t show outside the vault” excludes that record’s title from search, the widget and notifications regardless of the global settings.</p>
+
+<h2>6. Permissions</h2>
+<ul>
+  <li>Camera — to scan documents, cards and QR codes. Photos are saved only into the encrypted vault.</li>
+  <li>Photos — to add document images from the library.</li>
+  <li>Face ID / Touch ID — for quick unlocking.</li>
+  <li>Notifications — for expiry reminders.</li>
+</ul>
+
+<h2>7. Purchases</h2>
+<p>The Pro version is a one-time purchase through the App Store. Apple processes the payment under its own terms; the developer never receives your payment details. Records you have already saved remain accessible regardless of purchase status.</p>
+
+<h2>8. Deleting data</h2>
+<p>Delete the app and all its data on the device is erased. Backup files you saved yourself must be deleted where you stored them. The app also offers “Erase vault” in Settings.</p>
+
+<h2>9. Children</h2>
+<p>The app is not intended for children under 13 and collects no data about anyone.</p>
+
+<h2>10. Changes</h2>
+<p>If this policy changes, the new version is published on this page with an updated date.</p>
+
+<h2>11. Contact</h2>
+<p>Privacy questions: <a href="mailto:batyr.igdirov@gmail.com">batyr.igdirov@gmail.com</a>.</p>
+</section>
+
+</body>
+</html>
