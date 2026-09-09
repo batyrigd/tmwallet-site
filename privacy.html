@@ -45,8 +45,9 @@
 <p>По вашему явному запросу (кнопка «Проверить по базе утечек» в разделе «Проверка паролей») приложение обращается к сервису Have I Been Pwned (haveibeenpwned.com). На сервер отправляются только первые пять символов криптографического хеша SHA-1 каждого пароля; сам пароль, логин, сайт и любые другие данные не передаются. По такому фрагменту восстановить пароль невозможно. Сопоставление выполняется на устройстве. Без нажатия этой кнопки приложение не выходит в сеть.</p>
 
 <h2>5. Функции системы, которые вы включаете сами</h2>
+<p>Некоторые удобства iOS работают с данными за пределами зашифрованного хранилища: в системном поиске, виджете, уведомлениях или буфере обмена. Во всех этих случаях данные остаются на вашем устройстве и в сеть не передаются. За пределы устройства они попадут, только если вы сами отправите их: например, вставите скопированный номер в сообщение или поделитесь вложением.</p>
 <table>
-  <tr><th>Функция</th><th>Что покидает хранилище</th></tr>
+  <tr><th>Функция</th><th>Что становится доступно вне зашифрованного хранилища (на этом же устройстве)</th></tr>
   <tr><td>Поиск iPhone (Spotlight)</td><td>Только названия записей и метки, без значений полей. Выключено по умолчанию.</td></tr>
   <tr><td>Виджет избранного</td><td>Только названия избранных записей. Выключено по умолчанию.</td></tr>
   <tr><td>Уведомления о сроках</td><td>По умолчанию без названия записи: только тип, например «документ». Название показывается, если вы это включите.</td></tr>
@@ -106,8 +107,9 @@
 <p>At your explicit request (the “Check against breach database” button in Password Check) the app contacts Have I Been Pwned (haveibeenpwned.com). Only the first five characters of each password’s SHA-1 hash are sent; the password itself, the username, the site and any other data are not. A password cannot be reconstructed from that fragment. Matching happens on the device. Without pressing that button the app never uses the network.</p>
 
 <h2>5. System features you enable yourself</h2>
+<p>Some iOS conveniences work with data outside the encrypted vault: in system search, the widget, notifications or the clipboard. In all these cases the data stays on your device and is never sent over the network. It leaves the device only if you send it yourself, for example by pasting a copied number into a message or sharing an attachment.</p>
 <table>
-  <tr><th>Feature</th><th>What leaves the vault</th></tr>
+  <tr><th>Feature</th><th>What becomes available outside the encrypted vault (on this same device)</th></tr>
   <tr><td>iPhone search (Spotlight)</td><td>Record titles and tags only, no field values. Off by default.</td></tr>
   <tr><td>Favorites widget</td><td>Titles of favorite records only. Off by default.</td></tr>
   <tr><td>Expiry notifications</td><td>By default without the record title: only the type, e.g. “document”. The title is shown only if you enable it.</td></tr>
